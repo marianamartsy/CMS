@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stat</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="panel">
+        <div class="row m-0 h-100">
+
+            <div class="panel-left col-2 p-0 px-4 text-white text-center">
+
+                <section class="date-box">
+                    <p class="mb-0 day">Środa</p>
+                    <p class="mb-0 time">12:00</p>
+                    <p class="mb-0 date">20/20/20</p>
+                </section>
+
+                <section class="menu">
+                    <a href="index.html" class="active">
+                        <div class="menu-item">
+                            <i class="bi bi-menu-up"></i>
+                            <p>Strona Główna</p>
+                        </div>
+                    </a>
+                    <a href="posts.html">
+                        <div class="menu-item">
+                            <i class="bi bi-chat-dots"></i>
+                            <p>posty</p>
+                        </div>
+                    </a>
+                    <a href="users.html">
+                        <div class="menu-item">
+                            <i class="bi bi-people-fill"></i>
+                            <p>użytkownicy</p>
+                        </div>
+                    </a>
+
+                </section>
+                <section class="info-box mt-3">
+                    <h3>Diamond CMS</h3>
+                    <p class="text-muted">&copy; Copyright 2023</p>
+                </section>
+
+            </div>
+
+            <div class="panel-right col-10 p-0 text-white text-center">
+                <div class="row m-0 h-100">
+                    <div class="col-9 mt-5">
+
+                        <section class="main-stats py-4 px-5 text-light">
+                            <h1 class="mb-5">Główne statystyki</h1>
+
+                            <div class="row mb-5">
+
+                                <div class="col-4">
+                                    <div class="main-stat-box p-5 border">
+                                        <h3>postów</h3>
+                                        <p>Łącznie: 3.250.120</p>
+                                        <p>W tym miesiącu: 124.555</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="main-stat-box p-5 border">
+                                        <h3>tematów</h3>
+                                        <p>Łącznie: 1.230.120</p>
+                                        <p>W tym miesiącu: 14.555</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="main-stat-box p-5 border">
+                                        <h3>użytkowników</h3>
+                                        <p>Łącznie: 850.720</p>
+                                        <p>W tym miesiącu: 7.555</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="chart" class="py-5 text-dark"></div>
+                        </section>
+
+                        <section class="main-table">
+                            <div class="d-flex justify-content-between">
+                                <h3 class="mb-3">Ostatnie posty:</h3>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-light dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Sortuj
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Według dat</a></li>
+                                        <li><a class="dropdown-item" href="#">Według autora</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <table class="table table-transprent text-light">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Temat</th>
+                                        <th scope="col">Użytkownik</th>
+                                        <th scope="col">Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
+                                        <td>Otto</td>
+                                        <td>22/12/2022</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, voluptatum.
+                                        </td>
+                                        <td>Thornton</td>
+                                        <td>22/12/2022</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
+                                        <td>Larry the Bird</td>
+                                        <td>22/12/2022</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+
+                        </section>
+
+                        <nav class="d-flex justify-content-center" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <aside class="col-3 p-4 text-light text-center">
+
+                        <section class="logo py-4">
+                            <p class="logo-text">
+                                <i class="bi bi-gem"></i> Diamond
+                            </p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, incidunt natus?
+                            </p>
+                        </section>
+
+                        <section class="users-online py-5">
+                            <h3>Użytkownicy online</h3>
+                            <p>47</p>
+                        </section>
+
+                        <section class="users-gender py-4">
+                            <h3>płeć użytkowników</h3>
+                            <div class="row m-0">
+                                <div class="col-6 box">
+                                    <i class="bi bi-gender-male"></i>
+                                    <p>56%</p>
+                                </div>
+                                <div class="col-6 box">
+                                    <i class="bi bi-gender-female"></i>
+                                    <p>44%</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="monthly-stats py-5">
+
+                            <h3>statystyki</h3>
+                            <div class="form-group mb-4">
+                                <select class="form-select bg-transparent text-light">
+                                    <option selected="">Styczeń</option>
+                                    <option>Luty</option>
+                                    <option>Marzec</option>
+                                    <option>Kwiecień</option>
+                                    <option>Maj</option>
+                                    <option>Czerwiec</option>
+                                    <option>Lipiec</option>
+                                    <option>Sierpień</option>
+                                    <option>Wrzesień</option>
+                                    <option>Październik</option>
+                                    <option>Listopad</option>
+                                    <option>Grudzień</option>
+                                </select>
+                            </div>
+
+                            <div class="row m-0">
+                                <div class="col-6 mb-4">
+                                    <p class="info">Posty</p>
+                                    <p class="number text-light">125.703</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Rejestracje</p>
+                                    <p class="number text-light">8.409</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Śr. czas - pobyt</p>
+                                    <p class="number text-light">46min</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Śr. czas - aktywność</p>
+                                    <p class="number text-light">24min</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Ilość zamówień</p>
+                                    <p class="number text-light">928</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Ilość reklamacji</p>
+                                    <p class="number text-light">6</p>
+                                </div>
+                            </div>
+
+
+                        </section>
+                    </aside>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html
